@@ -1,0 +1,459 @@
+{
+  "sections": {
+    "1631672391e4d5a483": {
+      "type": "image-with-text",
+      "blocks": {
+        "7b70e8fd-8a5b-4244-ba7f-0331a1b02580": {
+          "type": "button",
+          "settings": {
+            "btn_style": "primary",
+            "btn_text": "SHOP OUR COLLECTION",
+            "btn_url": "shopify:\/\/collections\/shop-all"
+          }
+        }
+      },
+      "block_order": [
+        "7b70e8fd-8a5b-4244-ba7f-0331a1b02580"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/natural_skin_care.jpg",
+        "bg_color": "rgba(0,0,0,0)",
+        "content_bg_color": "#fcf8f5",
+        "pre_header_color": "rgba(0,0,0,0)",
+        "text_color": "#08353a",
+        "link_color": "",
+        "link_color_hover": "",
+        "primary_btn_bg_color": "#08353a",
+        "primary_btn_bg_color_hover": "#5a2f41",
+        "primary_btn_text_color": "#fcf8f5",
+        "primary_btn_text_color_hover": "#f6eded",
+        "secondary_btn_border_color": "",
+        "secondary_btn_border_color_hover": "",
+        "secondary_btn_bg_color": "",
+        "secondary_btn_bg_color_hover": "",
+        "secondary_btn_text_color": "",
+        "secondary_btn_text_color_hover": "",
+        "pre_header": "",
+        "main_title": "Clean Skincare.<br>For Everyone.",
+        "text": "Treat your skin with the best nature and science have to offer – without the luxury price tag.",
+        "block_style": "block-style-1",
+        "pre_header_tag": "h3",
+        "title_tag": "h1",
+        "title_size_desk": 44,
+        "title_size_mob": 28,
+        "text_alignment_desk": "center",
+        "text_alignment_mob": "center",
+        "img_alignment": true,
+        "stack_order": false,
+        "show_overlay_img": false,
+        "desk_btn_size": 16,
+        "mob_btn_size": 12,
+        "desk_btn_width": 210,
+        "mob_btn_width": 145,
+        "horizantal_spacing_desk": 0,
+        "horizantal_spacing_mob": 0,
+        "vertical_spacing_desk": 0,
+        "vertical_spacing_mob": 0,
+        "overlay_img_width_desk": 210,
+        "overlay_img_width_mob": 160,
+        "top_position_desk": 20,
+        "top_position_mob": 20,
+        "lr_position_desk": 40,
+        "lr_position_mob": 40,
+        "text_side_width": 50,
+        "image_side_width": 50,
+        "text_horizantal_space": 45
+      }
+    },
+    "1631872577918ced4c": {
+      "type": "press-section",
+      "blocks": {
+        "ba660b66-5fe3-4dcf-a902-09505d3bc187": {
+          "type": "desktop-logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/1-allure.png"
+          }
+        },
+        "e305f94e-e76f-454d-87f7-479ee1dbfca7": {
+          "type": "desktop-logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/2-nylon.png"
+          }
+        },
+        "fafeea8f-9fe7-42f3-8668-63aa6efb6450": {
+          "type": "desktop-logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/3-cosmopolitan.png"
+          }
+        },
+        "959eadb6-99ce-4de9-a8b1-fd1cb261fe8c": {
+          "type": "desktop-logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/4-byrdie.png"
+          }
+        },
+        "9247f551-a29d-4a0b-a43f-7a3cb04acf3e": {
+          "type": "desktop-logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/5-cnn.png"
+          }
+        },
+        "828d28d2-cd39-4a0f-818b-736c8df0a0af": {
+          "type": "mobile-logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/1-allure.png"
+          }
+        },
+        "ec89d66b-ab7d-4817-8849-f0264bb9edbd": {
+          "type": "mobile-logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/3-cosmopolitan.png"
+          }
+        },
+        "6815314a-ae80-40e1-896b-ef7b8758aea3": {
+          "type": "mobile-logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/4-byrdie.png"
+          }
+        }
+      },
+      "block_order": [
+        "ba660b66-5fe3-4dcf-a902-09505d3bc187",
+        "e305f94e-e76f-454d-87f7-479ee1dbfca7",
+        "fafeea8f-9fe7-42f3-8668-63aa6efb6450",
+        "959eadb6-99ce-4de9-a8b1-fd1cb261fe8c",
+        "9247f551-a29d-4a0b-a43f-7a3cb04acf3e",
+        "828d28d2-cd39-4a0f-818b-736c8df0a0af",
+        "ec89d66b-ab7d-4817-8849-f0264bb9edbd",
+        "6815314a-ae80-40e1-896b-ef7b8758aea3"
+      ],
+      "settings": {
+        "bg_color": "#5a2f41"
+      }
+    },
+    "16318788241ddc9d17": {
+      "type": "featured-collection",
+      "settings": {
+        "bg_color": "#fcf8f5",
+        "select_collection": "shop-all",
+        "main_title": "Naturally Effective Skincare",
+        "text": "More nourishing ingredients. More results. Always clean, vegan, and cruelty-free.",
+        "product_per_row": "2",
+        "btn_style": "primary"
+      }
+    },
+    "163194429315bbc248": {
+      "type": "mission-section",
+      "blocks": {
+        "bf3937ef-80c0-4282-a37d-5135ec7405b8": {
+          "type": "button",
+          "settings": {
+            "btn_style": "primary",
+            "btn_text": "SHOP OUR SKINCARE LINE",
+            "btn_url": "shopify:\/\/collections\/shop-all"
+          }
+        }
+      },
+      "block_order": [
+        "bf3937ef-80c0-4282-a37d-5135ec7405b8"
+      ],
+      "settings": {
+        "bg_img_desk": "shopify:\/\/shop_images\/2-clean-skincare-brand-fleur-and-bee-V2.jpg",
+        "bg_img_mob": "shopify:\/\/shop_images\/2-clean-skin-care-brand-fleur-and-beeV3_27249d43-350f-4d41-91de-8d5997fa633b.jpg",
+        "pre_header": "BETTER IN EVERY WAY",
+        "main_title": "",
+        "text": "We're on a mission to create skincare products that are better for your skin, better for the planet, and better for your wallet.",
+        "pre_header_color": "#5a2f41",
+        "text_color": "#5a2f41",
+        "link_color": "",
+        "link_color_hover": "",
+        "primary_btn_bg_color": "#5a2f41",
+        "primary_btn_bg_color_hover": "#ffffff",
+        "primary_btn_text_color": "#ffffff",
+        "primary_btn_text_color_hover": "#5a2f41",
+        "secondary_btn_border_color": "",
+        "secondary_btn_border_color_hover": "",
+        "secondary_btn_bg_color": "",
+        "secondary_btn_bg_color_hover": "",
+        "secondary_btn_text_color": "",
+        "secondary_btn_text_color_hover": "",
+        "pre_header_tag": "h2",
+        "title_tag": "h3",
+        "title_size_desk": 36,
+        "title_size_mob": 28,
+        "text_alignment_desk": "center",
+        "text_alignment_mob": "center"
+      }
+    },
+    "163194693599fa82cc": {
+      "type": "ticker-section",
+      "blocks": {
+        "32055fd3-1e1f-4790-8100-22ae3e30c24a": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/vegan2.png",
+            "icon_text": "Cruelty-Free"
+          }
+        },
+        "a4133e35-45df-484c-bde6-9ee94c8d7128": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/sustainable2.png",
+            "icon_text": "Vegan"
+          }
+        },
+        "898b6e2e-a0a7-4b2c-bbdd-e3499c1b2280": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/recyclable2.png",
+            "icon_text": "100% Recycled Paper Packaging"
+          }
+        },
+        "177299a8-dca7-43c0-aeba-f7c73629af07": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/carbonneutral2.png",
+            "icon_text": "Sustainably Made"
+          }
+        },
+        "32642077-4a4c-4d42-bae4-b62a9ba5f9d6": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/usa2.png",
+            "icon_text": "Bottled in USA"
+          }
+        },
+        "f7e5ed4d-c440-4cdb-828c-0bf22002c86c": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/affordable2.png",
+            "icon_text": "Affordably Priced"
+          }
+        },
+        "64a85be2-47af-46a9-b3fc-161147a36a6d": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/charity2.png",
+            "icon_text": "1% to Charity"
+          }
+        },
+        "c412963e-a18b-4665-ac93-05bfb8348286": {
+          "type": "icon_with_text",
+          "disabled": true,
+          "settings": {
+            "icon_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "32055fd3-1e1f-4790-8100-22ae3e30c24a",
+        "a4133e35-45df-484c-bde6-9ee94c8d7128",
+        "898b6e2e-a0a7-4b2c-bbdd-e3499c1b2280",
+        "177299a8-dca7-43c0-aeba-f7c73629af07",
+        "32642077-4a4c-4d42-bae4-b62a9ba5f9d6",
+        "f7e5ed4d-c440-4cdb-828c-0bf22002c86c",
+        "64a85be2-47af-46a9-b3fc-161147a36a6d",
+        "c412963e-a18b-4665-ac93-05bfb8348286"
+      ],
+      "settings": {
+        "bg_color": "#c1cfce",
+        "border_color_top": "#c1cfce",
+        "border_color_bottom": "#c1cfce",
+        "border_size_top": 3,
+        "border_size_bottom": 3
+      }
+    },
+    "1631952471b8425c13": {
+      "type": "testimonial-section",
+      "blocks": {
+        "1c2dffa5-3de8-4c02-845c-a6c56f48fb3b": {
+          "type": "review",
+          "settings": {
+            "profile_pic": "shopify:\/\/shop_images\/customerreview-toner-2.png",
+            "text": "I am a licensed esthetician and this is By FAR the BEST skin care products i have EVER found!",
+            "sub_text": "I have tried products ranging from 5$ to 300$ and this is the number 1 in my book, I have only used it for 5 days and my skin looks so freaking great! I am beyond impressed and recommending Fleur & Bee to EVERYONE!!!",
+            "customer_name": "KATIE"
+          }
+        },
+        "590a634a-9f72-4d5e-831f-733f29d0e563": {
+          "type": "review",
+          "settings": {
+            "profile_pic": "shopify:\/\/shop_images\/customerreview-6.png",
+            "text": "I noticed an improvement in my skin just after a few days.",
+            "sub_text": "It looks brighter, more even toned, and I love that the moisturizers don’t leave my skin oily or shiny. I love the products, and I love how they’re made.",
+            "customer_name": "Cecily"
+          }
+        },
+        "734a4fb5-391c-4dd0-971a-69e784e5ef0e": {
+          "type": "review",
+          "settings": {
+            "profile_pic": "shopify:\/\/shop_images\/customerreview-toner-1.png",
+            "text": "I’ve been loving using this skin care line.",
+            "sub_text": "I did a lot of research of all the different skin care lines and this one came on top as far as affordability goes. It has definitely exceeded my expectations! My skin feels so wonderful!",
+            "customer_name": "McKenzie"
+          }
+        }
+      },
+      "block_order": [
+        "1c2dffa5-3de8-4c02-845c-a6c56f48fb3b",
+        "590a634a-9f72-4d5e-831f-733f29d0e563",
+        "734a4fb5-391c-4dd0-971a-69e784e5ef0e"
+      ],
+      "settings": {
+        "show_photo": true,
+        "star_color": "#5a2f41",
+        "text_color": "#25514f",
+        "show_review_btn": false,
+        "link_text": "Read All Reviews"
+      }
+    },
+    "163167563228142441": {
+      "type": "image-with-text",
+      "blocks": {
+        "dfb8a5e6-9a71-48a7-ae2f-f7886871556a": {
+          "type": "button",
+          "settings": {
+            "btn_style": "primary",
+            "btn_text": "Book Your Free Consultation",
+            "btn_url": "shopify:\/\/pages\/free-skincare-consultation"
+          }
+        }
+      },
+      "block_order": [
+        "dfb8a5e6-9a71-48a7-ae2f-f7886871556a"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/skincareconsultation.png",
+        "bg_color": "#c1cfce",
+        "content_bg_color": "",
+        "pre_header_color": "#22504e",
+        "text_color": "#22504e",
+        "link_color": "",
+        "link_color_hover": "",
+        "primary_btn_bg_color": "#1a3f3e",
+        "primary_btn_bg_color_hover": "#ffffff",
+        "primary_btn_text_color": "#ffffff",
+        "primary_btn_text_color_hover": "#1a3f3e",
+        "secondary_btn_border_color": "#000000",
+        "secondary_btn_border_color_hover": "",
+        "secondary_btn_bg_color": "#ffffff",
+        "secondary_btn_bg_color_hover": "#1a3f3e",
+        "secondary_btn_text_color": "#1a3f3e",
+        "secondary_btn_text_color_hover": "#ffffff",
+        "pre_header": "VIRTUAL SKINCARE CONSULTATION",
+        "main_title": "Want skincare personalized for your specific needs?",
+        "text": "Book a free 15-minute video session, and one of our licensed aestheticians will build you a customized routine.",
+        "block_style": "block-style-2",
+        "pre_header_tag": "h3",
+        "title_tag": "h2",
+        "title_size_desk": 36,
+        "title_size_mob": 28,
+        "text_alignment_desk": "left",
+        "text_alignment_mob": "center",
+        "img_alignment": true,
+        "stack_order": false,
+        "show_overlay_img": false,
+        "desk_btn_size": 16,
+        "mob_btn_size": 12,
+        "desk_btn_width": 385,
+        "mob_btn_width": 255,
+        "horizantal_spacing_desk": 0,
+        "horizantal_spacing_mob": 10,
+        "vertical_spacing_desk": 0,
+        "vertical_spacing_mob": 30,
+        "overlay_img_width_desk": 100,
+        "overlay_img_width_mob": 160,
+        "top_position_desk": 20,
+        "top_position_mob": 20,
+        "lr_position_desk": 40,
+        "lr_position_mob": 40,
+        "text_side_width": 50,
+        "image_side_width": 50,
+        "text_horizantal_space": 50
+      }
+    },
+    "1631676770314a51f5": {
+      "type": "image-with-text",
+      "blocks": {
+        "8ae522fe-9f74-4b5a-af5f-8fdeeeeb6279": {
+          "type": "link",
+          "settings": {
+            "link_text": "<u>Our Charitable Contributions<u><\/u><\/u>",
+            "link_url": "shopify:\/\/pages\/beyond-skin-care"
+          }
+        },
+        "5fd17e43-b8da-438e-99cd-d1a70afd28d1": {
+          "type": "link",
+          "settings": {
+            "link_text": "<u>Shop Our Collection<u><\/u><\/u>",
+            "link_url": "shopify:\/\/collections\/shop-all"
+          }
+        }
+      },
+      "block_order": [
+        "8ae522fe-9f74-4b5a-af5f-8fdeeeeb6279",
+        "5fd17e43-b8da-438e-99cd-d1a70afd28d1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/4-skincare-with-a-social-mission.jpg",
+        "overlay_img": "shopify:\/\/shop_images\/image.png",
+        "bg_color": "",
+        "content_bg_color": "",
+        "pre_header_color": "",
+        "text_color": "#22504e",
+        "link_color": "#5a2f41",
+        "link_color_hover": "#1a3f3e",
+        "primary_btn_bg_color": "",
+        "primary_btn_bg_color_hover": "",
+        "primary_btn_text_color": "",
+        "primary_btn_text_color_hover": "",
+        "secondary_btn_border_color": "",
+        "secondary_btn_border_color_hover": "",
+        "secondary_btn_bg_color": "",
+        "secondary_btn_bg_color_hover": "",
+        "secondary_btn_text_color": "",
+        "secondary_btn_text_color_hover": "",
+        "pre_header": "",
+        "main_title": "Beyond Skincare",
+        "text": "<p>1% of your purchase will go to Days for Girls, providing menstrual care and education for girls in need. <\/p>",
+        "block_style": "block-style-3",
+        "pre_header_tag": "h3",
+        "title_tag": "h2",
+        "title_size_desk": 36,
+        "title_size_mob": 28,
+        "text_alignment_desk": "left",
+        "text_alignment_mob": "center",
+        "img_alignment": false,
+        "stack_order": false,
+        "show_overlay_img": true,
+        "desk_btn_size": 16,
+        "mob_btn_size": 12,
+        "desk_btn_width": 180,
+        "mob_btn_width": 100,
+        "horizantal_spacing_desk": 60,
+        "horizantal_spacing_mob": 20,
+        "vertical_spacing_desk": 45,
+        "vertical_spacing_mob": 35,
+        "overlay_img_width_desk": 180,
+        "overlay_img_width_mob": 120,
+        "top_position_desk": 16,
+        "top_position_mob": 10,
+        "lr_position_desk": 20,
+        "lr_position_mob": 6,
+        "text_side_width": 50,
+        "image_side_width": 50,
+        "text_horizantal_space": 50
+      }
+    }
+  },
+  "order": [
+    "1631672391e4d5a483",
+    "1631872577918ced4c",
+    "16318788241ddc9d17",
+    "163194429315bbc248",
+    "163194693599fa82cc",
+    "1631952471b8425c13",
+    "163167563228142441",
+    "1631676770314a51f5"
+  ]
+}

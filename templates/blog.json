@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "main": {
+      "type": "blog-template",
+      "settings": {
+        "layout_header": "right",
+        "blog_bg": "#fcf8f5",
+        "blog_banner": "shopify:\/\/shop_images\/skin-care-tips_b2558b94-f023-42d9-9337-59c86802f9b8.jpg",
+        "blog_title": "Our Blog - Your Skincare Library",
+        "blog_subtitle": "Welcome wisdom seeker. On these pages you'll find answers to all your skincare questions. Our blog covers everything from skin care tips, how-to's, ways to build a routine to deep dives into ingredients. Consider this your personal skincare library.",
+        "padding": "20px 12% 20px 6%",
+        "layout": "grid",
+        "blog_sidebar_enable": "none",
+        "blog_post_paginate": "9",
+        "blog_post_width": "33%",
+        "blog_post_width_medium": "one-half",
+        "blog_post_width_small": "one-whole",
+        "text_alignment": "text-left",
+        "title_class": "h3",
+        "blog_show_author": false,
+        "blog_show_date": false,
+        "blog_date_format": "%B %d, %Y",
+        "blog_show_excerpt": true,
+        "blog_show_read_more": true,
+        "blog_show_comments": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
