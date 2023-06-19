@@ -1,0 +1,25 @@
+{{ 'cart-drawer.css' | asset_url | stylesheet_tag }}
+
+<div id="CartDrawer" class="drawer drawer--right">
+    <div class="drawer__header text-center">
+      <div class="drawer__title h5 bold">Your Cart</div>
+      <div class="drawer__close js-drawer-close">
+        {% render 'icon-close' %}
+      </div>
+      {%- comment -%}
+      <div class="shipping-mot">
+        <div class="free-ship">Congrats! You've earned free shipping</div>
+        <div class="mot-text bold" style="display: none;">You're only <span class="cart-total-mot"></span> away from free shipping</div>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+      {%- endcomment -%}
+    </div>
+    <div id="CartContainer"></div>
+    <div class="clearfix"></div>
+    {% if cart.item_count != 0 %}
+      <div class="upsell-header text-center">Complete your routine:</div>
+    {% endif %}
+    <div id="upsell_container"></div>
+</div>
