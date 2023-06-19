@@ -1,0 +1,342 @@
+/* common css start */
+.image-with-text .wrapper {
+    display: flex;
+}
+.image-with-text .alpha {
+    position: relative;
+    padding: 20px;
+}
+.image-with-text .beta {
+    max-width: 50%;
+    flex: 50%;
+}
+.image-with-text .beta .image {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+.image-with-text .content-wrap {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.image-with-text .pre_header {
+    font-family: var(--font-cerebri-book);
+}
+.image-with-text .main_title {
+    font-family: var( --font-mackinac-medium);
+    margin: 0 0 12px;
+    font-size:  32px;
+}
+.image-with-text .text {
+    margin: 15px 0 20px;
+    font-family: var(--font-cerebri-regular);
+    line-height: 1.5;
+}
+.image-with-text .text div {
+    margin-bottom: 20px;
+    line-height: 2;
+}
+.image-with-text .text div:last-child {
+    margin-bottom: 0;
+}
+.image-with-text .button:focus { 
+    box-shadow: unset;
+}
+.image-with-text .button {
+    font-size: 16px;
+    text-decoration: none;
+    height: 100%;
+    padding: 1.2rem 2rem;
+    width: 100%;
+    font-family: var(--font-secondary-normal);
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.image-with-text .button:last-child {
+    margin-bottom: 0;
+}
+.block-style-2 .main_title, .block-style-3 .main_title {
+    color: var(--color-primary)
+}
+.block-style-2 .text, .block-style-3 .text {
+    font-size: 18px;
+}
+.image-with-text .link {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 12px;
+    font-family: var(--font-cerebri-regular);
+}
+.image-with-text .link:last-child {
+    margin-bottom: 0;
+}
+.image-with-text .alignment .alpha {
+    order: 2
+}
+.image-with-text .alignment .beta {
+    order: 1;
+    position: relative;
+}
+.image-with-text .overlay-image {
+    position: absolute;
+    width: 100%;
+}
+.image-with-text .beta .image-wrap {
+    height: 100%;
+}
+.image-with-text .image-group {
+    display: flex;
+    align-items: center;
+    margin: 30px -8px 0;
+}
+.image-with-text .content-image {
+    max-width: 90px;
+    flex: 90px;
+    margin: 0 8px;
+    object-fit: cover;
+    width: 100%;
+}
+/* common css end */
+
+/* hero banner css start */
+.block-style-1 {
+    height: calc(80vh - 104px);
+}
+.block-style-1 .main-container {
+    height: 100%;
+}
+.block-style-1 .wrapper {
+    height: 100%;
+}
+.block-style-1 .main_title {
+    line-height: 1.4;
+    color: #08353A;
+}
+.block-style-1 .text {
+    font-size: 20px;
+    line-height: 1.4;
+}
+.block-style-1 .button-primary {
+    max-width: 310px;
+}
+.block-style-1 .button-primary:focus {
+    box-shadow: unset;
+}
+.block-style-1 .content-wrap {
+    max-width: 500px;
+}
+/* hero banner css end */
+
+/* consultation section css start */
+.block-style-2 .sub-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: var(--color-teal)
+}
+.block-style-2 .text {
+    max-width: 420px;
+}
+.block-style-2 .content-wrap {
+    max-width: 450px;
+}
+.block-style-2 .button-primary, .block-style-2 .button-secondary {
+    max-width: 326px;
+}
+/* consultation section css end */
+
+/* purchase section css start */
+.block-style-3 .beta {
+    min-height: 480px;
+}
+.block-style-3 .beta .image {
+    object-position: -15px;
+}
+.block-style-3 .content-wrap {
+    max-width: 400px;
+}
+.block-style-3 .text p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.block-style-3 .text p:last-child {
+    margin-bottom: 0;
+}
+/* purchase section css end */
+
+/* about us page */
+.about-us .image-with-text .content-wrap {
+    margin: 30px 0;
+}
+.about-us .shopify-section:last-child {
+    margin-top: 110px;
+}
+.about-us .shopify-section:last-child .content-wrap {
+    margin: 0;
+}
+.about-us .shopify-section:first-child .content-wrap {
+    margin: 0;
+}
+.about-us .shopify-section:nth-child(2) .content-wrap {
+    margin: 20px 0;
+}
+.about-us .image-with-text:last-child .main_title {
+    margin-bottom: 20px;
+}
+.about-us .image-with-text .link {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1279px) {
+    .block-style-2 .main-container {
+        padding: 0 30px !important;
+    }
+    .about-us .image-with-text .link {
+        margin-top: -25px;
+    }
+    .about-us .image-with-text .content-wrap {
+        margin: 20px 0;
+    }
+    .about-us .shopify-section:nth-child(2) .content-wrap {
+        margin: 10px 0;
+    }
+    .about-us .shopify-section:nth-last-child(2) .content-wrap {
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width: 991px) {
+    .about-us .shopify-section:first-child {
+        margin-top: 72px;
+    }
+    .block-style-1 {
+        height: calc(100vh - 70px);
+        margin-top: 70px;
+    }
+    .about-us .shopify-section:last-child .content-wrap {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px ) {
+    .block-style-1 .content-wrap {
+        max-width: 290px;
+    }
+    .block-style-1 .text {
+        font-size: 16px;
+    }
+    .block-style-1 .button-primary {
+        max-width: 190px;
+    }
+    .pre_header {
+        font-size: 14px !important;
+    }
+    .image-with-text .main_title {
+        font-size: 22px !important;
+    }
+    .block-style-2 .text, .block-style-3 .text {
+        font-size: 14px;
+    }
+    .block-style-2 .button-primary, .block-style-2 .button-secondary {
+        max-width: 280px;
+    }
+    .block-style-3 .beta .image {
+        object-position: -45px;
+    }
+    .block-style-3 .beta {
+        min-height: 340px;
+    }
+    .image-with-text .link {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .block-style-3 .content-wrap {
+        max-width: 274px;
+    }
+    .image-with-text .text {
+        margin: 16px 0 20px;
+    }
+    .image-with-text .button {
+        font-size: 14px;
+        min-height: 40px;
+    }
+}
+@media screen and (max-width: 480px ) {
+    .about-us .shopify-section:last-child {
+        margin-top: 30px;
+    }
+    .image-with-text .main_title {
+        font-size:  20px;
+    }
+    .about-us .image-with-text .link {
+        margin-top: -10px;
+    }
+    .block-style-1 {
+        height: auto;
+    }
+    .image-with-text .wrapper {
+        flex-wrap: wrap;
+    }
+    .image-with-text .alpha {
+        max-width: 100% !important;
+        flex: 100% !important;
+        order: 2;
+    }
+    .image-with-text .beta {
+        max-width: 100% !important;
+        flex: 100% !important;
+        order: 1;
+    }
+    .block-style-1 .beta {
+        max-height: 400px;
+    }
+    .image-with-text .content-wrap {
+        position: unset;
+        top: unset;
+        left: unset !important;
+        transform: unset !important;
+        max-width: 320px;
+    }
+    .image-with-text .alpha {
+        padding: 45px 20px;
+    }
+    .image-with-text .button {
+        font-size: 11px;
+        min-height: 34px;
+    }
+    .block-style-1 .button-primary {
+        max-width: 160px;
+    }
+    .block-style-2 .button-primary, .block-style-2 .button-secondary {
+        max-width: 230px;
+    }
+    .block-style-2 .alpha, .block-style-3 .alpha {
+        margin-bottom: -45px;
+    }
+    .image-with-text .stack-order .alpha {
+        order: 1
+    }
+    .image-with-text .stack-order .beta {
+        order: 2
+    }
+    .image-with-text .text div {
+        display: flex;
+        margin-bottom: 0;
+    }
+    .image-with-text .text div br {
+        display: none;
+    }
+    .image-with-text .text div b {
+        margin-right: 5px;
+      letter-spacing: 0;
+    }
+    .image-with-text .text div b::after {
+        content: ':';
+    }
+}
+@media screen and (max-width: 359px) {
+    .block-style-2 .text, .block-style-3 .text {
+        font-size: 13px;
+    }
+}
