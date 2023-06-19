@@ -1,0 +1,361 @@
+<link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
+
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+
+{% comment %}
+<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+{% endcomment %}
+
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+  </symbol>
+</svg>
+
+<header class="custom-header">
+  <div class="header-container">
+    <div class="header-wrapper">
+      {%- if section.settings.menu != blank -%}
+        <nav class="header-menu">
+          <div class="mobile_menu_button">
+            <div class="mobile_menu-bar-wrap">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon mobile_menu-icon-hamburger" viewBox="0 0 37 40"><path d="M33.5 25h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0-11.5h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2zm0 23h-30c-1.1 0-2-.9-2-2s.9-2 2-2h30c1.1 0 2 .9 2 2s-.9 2-2 2z"></path></svg>
+              <svg aria-hidden="true" focusable="false" role="presentation" class="mobile_menu-icon-close" viewBox="0 0 37 40"><path d="M21.3 23l11-11c.8-.8.8-2 0-2.8-.8-.8-2-.8-2.8 0l-11 11-11-11c-.8-.8-2-.8-2.8 0-.8.8-.8 2 0 2.8l11 11-11 11c-.8.8-.8 2 0 2.8.4.4.9.6 1.4.6s1-.2 1.4-.6l11-11 11 11c.4.4.9.6 1.4.6s1-.2 1.4-.6c.8-.8.8-2 0-2.8l-11-11z"></path></svg>
+            </div>
+            <label class="mobile_menu_label">MENU</label>
+          </div>
+          <ul class="menu-list">
+            {%- for link in section.settings.menu.links -%}
+              <li class="menu-item">
+                {%- if link.links != blank -%}
+                      <summary class="menu-link-wrap" data-top-menu-item>
+                        <span class="menu-link {% if link.child_active %}menu-active-link{% endif %}">{{ link.title | escape }}</span>
+                        {% render 'icon-caret' %}
+                      </summary>
+
+                      {% if link.levels == 1 %}
+                      <ul class="header-submenu" data-header-dropdown-menu>
+                        {%- for childlink in link.links -%}
+                          <li class="sub-menu-item">
+                              <a href="{{ childlink.url }}" class="sub-menu-link">
+                                {{ childlink.title | escape }}
+                              </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                      {% endif %}
+
+                      {% if link.levels == 2 %}
+                      <div class="mega_menu" data-header-dropdown-menu>
+                        <div class="mega_menu-container">
+                          <div class="mega_menu-row">
+                            <div class="mega_menu-list-outer-wrap">
+                              {%- for childlink in link.links -%}
+                              <div class="mega_menu-inner-wrap">
+                                <ul class="mega_menu-list">
+                                  <li class="mega_menu-item mega_menu-heading">{{ childlink.title | escape }}</li>
+                                  {%- for grandchildlink in childlink.links -%}
+                                    <li class="mega_menu-item mega_menu-text">
+                                      <a href="{{ grandchildlink.url }}" class="mega_menu-link">
+                                        {{ grandchildlink.title | escape }}
+                                      </a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                              </div>
+                              {% endfor %}
+                              <!-- <div class="mega_menu-inner-wrap">
+                                <ul class="mega_menu-list">
+                                  <li class="mega_menu-item mega_menu-heading">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                </ul>
+                              </div>
+                              <div class="mega_menu-inner-wrap">
+                                <ul class="mega_menu-list">
+                                  <li class="mega_menu-item mega_menu-heading">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                  <li class="mega_menu-item mega_menu-text">By Product Type</li>
+                                </ul>
+                              </div> -->
+                            </div>
+                            <div class="mega_menu-collection-wrap">
+                              {% for block in section.blocks %}
+                                {% if block.settings.collection_image != blank %}
+                                  <div class="mega_menu-collection-item">
+                                    <a href="{{ block.settings.collection_url }}" class="mega_menu-collection-item-inner-wrap">
+                                      <div class="mega_menu-collection-img-wrap">
+                                        {% render 'responsive--image' with block.settings.collection_image as image, max_width: 320px, class: 'mega_menu-collection-img' %}
+                                      </div>
+                                      <h3 class="mega_menu-collection-title">{{ block.settings.collection_title }}</h3>
+                                    </a>
+                                  </div>
+                                {% endif %}
+                              {% endfor %}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {% endif %}
+                      
+                {%- else -%}
+                  <a href="{{ link.url }}" class="menu-link" data-top-menu-item>
+                    <span>{{ link.title | escape }}</span>
+                  </a>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </nav>
+      {%- endif -%}
+
+      {%- if request.page_type == 'index' -%}
+        <h1 class="header-logo">
+      {%- endif -%}
+          <a href="{{ routes.root_url }}" class="logo-wrap">
+            {%- if section.settings.logo != blank -%}
+              <img
+                src="{{ section.settings.logo | asset_url }}"
+                loading="lazy"
+                class="header_logo"
+                alt="{{ shop.name | escape }}"
+              >
+            {%- else -%}
+              <span class="h2">{{ shop.name }}</span>
+            {%- endif -%}
+          </a>
+      {%- if request.page_type == 'index' -%}
+        </h1>
+      {%- endif -%}
+
+      <div class="header__icons">
+        <details-modal class="header-search">
+          <details>
+            <summary class="search-icon-wrap" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+              <span>
+                <div class="search-icon">
+                  {% render 'framework--icons', icon: 'search' %}
+                  <span class="icon-label">search</span>
+                </div>
+                <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                  <use href="#icon-close">
+                </svg>
+              </span>
+            </summary>
+            <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+              <div class="search-modal__content" tabindex="-1">
+                <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+                  <div class="field">
+                    <input class="search__input field__input" id="Search-In-Modal" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.search' | t }}">
+                    {%- comment -%}
+                    <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+                    {%- endcomment -%}
+                    <input type="hidden" name="options[prefix]" value="last">
+                    {%- comment -%}
+                    <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                        {% render 'framework--icons', icon: 'search' %}
+                    </button>
+                    {%- endcomment -%}
+                  </div>
+                </form>
+                {%- comment -%}
+                <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+                  <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                    <use href="#icon-close">
+                  </svg>
+                </button>
+                {%- endcomment -%}
+              </div>
+            </div>
+          </details>
+        </details-modal>
+
+        <a href="{{ routes.cart_url }}" class="cart-icon-link js-drawer-open-right" id="cart-icon-bubble" aria-controls="CartDrawer" aria-expanded="false">
+          <div class="cart-icon">
+            {% render 'framework--icons', icon: 'cart' %}
+            <span class="cart-count header-bar__cart-count hidden-count">{{ cart.item_count }}</span>
+            <span class="icon-label">cart</span>
+          </div>
+          {% comment %}
+          <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+          {%- if cart != empty -%}
+            <div class="cart-count-bubble">
+              {%- if cart.item_count < 100 -%}
+                <span aria-hidden="true">{{ cart.item_count }}</span>
+              {%- endif -%}
+              <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+            </div>
+          {%- endif -%}
+          {% endcomment %}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header_mobile-menu">
+    <div class="header_mobile-menu-container">
+      <div class="header_mobile-top-menu-list-wrap">
+        <ul class="header_mobile-top-menu-list">
+          {%- for link in section.settings.mobile_menu.links -%}
+            {%- if link.links != blank -%}
+              <li class=" header_mobile-top-menu-item">
+                <summary class="header_mobile-top-menu-wrap" data-has-dropdown >
+                  <span class="header_mobile-top-menu-link {% if link.child_active %}menu-active-link{% endif %}">{{ link.title | escape }}</span>
+                  <span class="header_mobile-button">
+                    <span class="open">-</span>
+                    <span class="close">+</span>
+                  </span>
+                </summary>
+                <ul class="header_mobile-menu-top-list {% if link.levels == 1 %} header_mobile-menu-last-level {% endif %}">
+                  {%- for childlink in link.links -%}
+                    {%- if childlink.links != blank -%}
+                      <li class="header_mobile-child-item header_mobile-child-menu-link">
+                        <summary data-has-dropdown>
+                          {{ childlink.title | escape }}
+                          <span class="header_mobile-button">
+                            <span class="open">-</span>
+                            <span class="close">+</span>
+                          </span>
+                        </summary>
+                        <ul class="header_mobile-menu-grandchild-main-list {% if link.levels == 2 %} header_mobile-menu-last-level {% endif %}">
+                          {%- for grandchildlink in childlink.links -%}
+                              <a href="{{ grandchildlink.url }}" class="header_mobile-menu-grandchild-main-link">
+                                <span>{{ grandchildlink.title | escape }}</span>
+                              </a>
+                          {% endfor %}
+                        </ul>
+                      </li>
+                    {% else %}
+                      <a href="{{ childlink.url }}" class="header_mobile-menu-grandchild-main-link">
+                        <span>{{ childlink.title | escape }}</span>
+                      </a>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <a href="{{ link.url }}" class="header_mobile-top-menu-link header_mobile-top-menu-item">
+                <span>{{ link.title | escape }}</span>
+              </a>
+            {% endif %}
+          {% endfor %}  
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+{% comment %}
+{%- if request.page_type != 'cart' -%}
+  {%- render 'cart-notification' -%}
+{%- endif -%}
+{% endcomment %}
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if section.settings.logo %}
+      {% assign image_size = section.settings.logo.width | append: 'x' %}
+      "logo": {{ section.settings.logo | img_url: image_size | prepend: "https:" | json }},
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ],
+    "url": {{ shop.url | append: page.url | json }}
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ shop.url | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Header",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Logo",
+      "info": "-------"
+    },
+    {
+      "type": "text",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Destkop Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "mobile_menu",
+      "label": "Mobile Menu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Mega_menu_collection",
+      "name": "Mega Menu Collection List",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "collection_image",
+          "label": "Collection Image"
+        },
+        {
+          "type": "url",
+          "id": "collection_url",
+          "label": "Collection Link"
+        },
+        {
+          "type": "text",
+          "id": "collection_title",
+          "label": "Collection Title"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

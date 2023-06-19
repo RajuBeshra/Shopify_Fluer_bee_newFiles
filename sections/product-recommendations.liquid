@@ -1,0 +1,146 @@
+{{ 'collection-preview.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<style>
+  @media screen and (max-width: 480px) {
+      .collection-preview .grid {
+          grid-template-columns: repeat({{ section.settings.product_per_row }}, 1fr);
+      }
+  }
+</style>
+
+<product-recommendations class="product-recommendations" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4">
+  <div class="collection-preview">
+    <div class="main_container">
+      {% if recommendations.performed and recommendations.products_count > 0 %}
+        <div class="header_wrap text-center">
+            {% if section.settings.main_title != blank %}
+              <h2 class="main-title">{{ section.settings.main_title }}</h2>
+            {% endif %}
+        </div>
+        <div class="grid">
+          {% for recommendation in recommendations.products %}
+          {% assign noRecommend = false %}
+            {% for tag in recommendation.tags %}
+              {% if tag == 'no-recommend' %}
+                {% assign noRecommend = true %}
+              {% endif %}
+            {% endfor %}
+            {% render 'collection-item', product: recommendation, section: section, noRecommend: noRecommend %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</product-recommendations>
+
+{% javascript %}
+  class ProductRecommendations extends HTMLElement {
+    constructor() {
+      super();
+
+      const handleIntersection = (entries, observer) => {
+        if (!entries[0].isIntersecting) return;
+        observer.unobserve(this);
+
+        fetch(this.dataset.url)
+          .then(response => response.text())
+          .then(text => {
+            const html = document.createElement('div');
+            html.innerHTML = text;
+            const recommendations = html.querySelector('product-recommendations');
+            if (recommendations && recommendations.innerHTML.trim().length) {
+              this.innerHTML = recommendations.innerHTML;
+            }
+          })
+          .catch(e => {
+            console.error(e);
+          });
+      }
+
+      new IntersectionObserver(handleIntersection.bind(this), {rootMargin: '0px 0px 200px 0px'}).observe(this);
+    }
+  }
+
+  customElements.define('product-recommendations', ProductRecommendations);
+{% endjavascript %}
+
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Color",
+        "info": "-------"
+    },
+    {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+    },
+    {
+      "type": "header",
+      "content": "Content",
+      "info": "-------"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main Title"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Products Per Row",
+      "info": "-------"
+    },
+    {
+      "type": "select",
+      "id": "product_per_row",
+      "label": "Products Per Row (Mobile)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Button Style",
+      "info": "-------"
+    },
+    {
+      "type": "select",
+      "id": "btn_style",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Button Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Button Secondary"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+        "name": "Collection",
+        "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
